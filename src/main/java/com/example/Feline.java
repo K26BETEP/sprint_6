@@ -2,24 +2,11 @@ package com.example;
 
 import java.util.List;
 
-public class Feline extends Animal implements Predator {
+public class Feline extends CatFamily {
 
     @Override
-    public List<String> eatMeat() throws Exception {
-        return getFood("Хищник");
+    public List<String> getFood(String animalKind) throws Exception {
+        return super.getFood(animalKind);
     }
-
-    @Override
-    public String getFamily() {
-        return "Кошачьи";
-    }
-
-    public int getKittens() {
-        return getKittens(1);
-    }
-
-    public int getKittens(int kittensCount) {
-        return kittensCount;
-    }
-
 }
+
